@@ -1,24 +1,33 @@
-import logo from './logo.svg';
+import React from 'react';
+import { BrowserRouter, Routes, Route } from 'react-router-dom';
+import  SingUp from './SingUp';
+import LogIn from './LogIn'
+import ProtectedPage from './ProtectedPage';
 import './App.css';
+import CreateCompany from './CreateCompany';
+import CompanyList from './CompanyList';
+import UserCompanyList from './UserCompanyList';
 
 function App() {
   return (
-    <div className="App">
-      <header className="App-header">
-        <img src={logo} className="App-logo" alt="logo" />
-        <p>
-          Edit <code>src/App.js</code> and save to reload.
-        </p>
-        <a
-          className="App-link"
-          href="https://reactjs.org"
-          target="_blank"
-          rel="noopener noreferrer"
-        >
-          Learn React
-        </a>
-      </header>
-    </div>
+    <BrowserRouter>
+      <Routes>
+        {/* Public routes */}
+        <Route path='/' element={<SingUp />} />
+        <Route path='/login' element={<LogIn />} />
+        <Route path='/*' element={<h1> Page not Found </h1>}></Route>
+
+        {/* Protected routes */}
+        <Route element={<ProtectedPage />}>
+          <Route path='/userCompany' element={<UserCompanyList />} />
+          <Route path='/createCompany' element={<CreateCompany />} />
+          <Route path='/list' element={<CompanyList />} />
+        </Route>
+
+        {/* Catch-all for invalid URLs */}
+        
+      </Routes>
+    </BrowserRouter>
   );
 }
 

@@ -1,0 +1,115 @@
+/* General Styles */
+.company-list-container {
+    padding: 20px;
+    max-width: 1200px;
+    margin: 0 auto;
+}
+
+h1 {
+    text-align: center;
+    font-size: 2rem;
+    color: #333;
+    margin-bottom: 20px;
+}
+
+.create-company-btn {
+    display: block;
+    width: 200px;
+    margin: 0 auto 20px;
+    padding: 10px 20px;
+    background-color: #007bff;
+    color: white;
+    border: none;
+    border-radius: 5px;
+    cursor: pointer;
+    font-size: 1rem;
+    text-align: center;
+}
+
+.create-company-btn:hover {
+    background-color: #0056b3;
+}
+
+/* Table Styles */
+.company-list-table {
+    width: 100%;
+    border-collapse: collapse;
+    margin-top: 20px;
+}
+
+.company-list-table th,
+.company-list-table td {
+    border: 1px solid #ddd;
+    padding: 12px;
+    text-align: center;
+}
+
+.company-list-table th {
+    background-color: #f4f4f4;
+    font-size: 1rem;
+    color: #333;
+}
+
+.company-list-table td {
+    font-size: 0.9rem;
+}
+
+.company-list-table tr:nth-child(even) {
+    background-color: #f9f9f9;
+}
+
+.company-list-table tr:hover {
+    background-color: #f1f1f1;
+}
+
+/* No Companies Message */
+.company-list-container p {
+    text-align: center;
+    font-size: 1.2rem;
+    color: #777;
+}
+
+/* Responsive Design */
+@media screen and (max-width: 768px) {
+    h1 {
+        font-size: 1.5rem;
+    }
+
+    .create-company-btn {
+        width: 100%;
+        font-size: 0.9rem;
+        padding: 10px;
+    }
+
+    .company-list-table th, .company-list-table td {
+        font-size: 0.85rem;
+        padding: 10px;
+    }
+}
+
+@media screen and (max-width: 480px) {
+    h1 {
+        font-size: 1.3rem;
+    }
+
+    .create-company-btn {
+        width: 100%;
+        font-size: 0.8rem;
+        padding: 8px;
+    }
+
+    .company-list-table th, .company-list-table td {
+        font-size: 0.75rem;
+        padding: 8px;
+    }
+}
+
+/* Loader Styles */
+.loader {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    height: 50vh;
+    font-size: 1.5rem;
+    color: #007bff;
+}

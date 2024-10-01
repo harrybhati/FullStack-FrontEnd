@@ -1,0 +1,87 @@
+/* CreateCompany.css */
+.create-company-container {
+    width: 90%; /* Default to 90% for mobile */
+    max-width: 400px; /* Max width for larger screens */
+    margin: 0 auto;
+    padding: 20px;
+    border: 1px solid #ccc;
+    border-radius: 5px;
+}
+
+.create-company-container h2 {
+    text-align: center;
+}
+
+.create-company-container div {
+    margin-bottom: 15px;
+}
+
+.create-company-container label {
+    display: block;
+    margin-bottom: 5px;
+}
+
+.create-company-container input {
+    width: 100%;
+    padding: 10px; /* Increased padding for better touch targets */
+    border: 1px solid #ccc;
+    border-radius: 4px;
+}
+
+/* Container for the buttons to make them inline */
+.button-container {
+    display: flex; /* Use flexbox to align buttons */
+    justify-content: space-between; /* Space between buttons */
+}
+
+/* Style for the Save button */
+.save-button {
+    background-color: #4CAF50; /* Green */
+    color: white;
+    border: none;
+    padding: 10px 15px;
+    border-radius: 4px;
+    cursor: pointer;
+    font-size: 16px;
+    flex: 1; /* Allow buttons to grow equally */
+    margin-right: 10px; /* Space between buttons */
+}
+
+/* Remove margin for the Cancel button */
+.cancel-button {
+    background-color: #f44336; /* Red */
+    color: white;
+    border: none;
+    padding: 10px 15px;
+    border-radius: 4px;
+    cursor: pointer;
+    font-size: 16px;
+    flex: 1; /* Allow buttons to grow equally */
+}
+
+/* Optional: Add hover effects */
+.save-button:hover {
+    background-color: #45a049; /* Darker green */
+}
+
+.cancel-button:hover {
+    background-color: #e53935; /* Darker red */
+}
+
+/* Tablet styles */
+@media (min-width: 600px) {
+    .create-company-container {
+        width: 80%; /* Reduce width on tablet */
+    }
+
+    .button-container {
+        margin-top: 15px; /* Add margin on top for spacing */
+    }
+}
+
+/* Desktop styles */
+@media (min-width: 900px) {
+    .create-company-container {
+        width: 60%; /* Further reduce width on desktop */
+    }
+}
