@@ -1,0 +1,48 @@
+.edit-company-container {
+    max-width: 400px;
+    margin: 0 auto;
+    padding: 20px;
+    border: 1px solid #ccc;
+    border-radius: 8px;
+    box-shadow: 0 2px 10px rgba(0, 0, 0, 0.1);
+}
+
+.edit-company-container h2 {
+    text-align: center;
+    margin-bottom: 20px;
+}
+
+.edit-company-container label {
+    display: block;
+    margin-bottom: 8px;
+}
+
+.edit-company-container input {
+    width: 100%;
+    padding: 10px;
+    margin-bottom: 20px;
+    border: 1px solid #ccc;
+    border-radius: 4px;
+}
+
+.edit-company-container button {
+    width: 100%;
+    padding: 10px;
+    background-color: #4CAF50;
+    color: white;
+    border: none;
+    border-radius: 4px;
+    cursor: pointer;
+}
+
+.edit-company-container button:hover {
+    background-color: #45a049;
+}
+
+.edit-company-container button[type="button"] {
+    background-color: #f44336; 
+}
+
+.edit-company-container button[type="button"]:hover {
+    background-color: #e53935; 
+}

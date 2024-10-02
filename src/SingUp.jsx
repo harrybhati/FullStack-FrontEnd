@@ -13,7 +13,7 @@ const SignupPage = () => {
         const user = localStorage.getItem('user');
         if (user) {
             const { role } = JSON.parse(user);
-            // Redirect based on the user's role
+           
             if (role === 'IT_USER_NORMAL') {
                 navigate('/userCompany');
             } else {
@@ -26,15 +26,15 @@ const SignupPage = () => {
         try {
             const response = await axios.post('http://localhost:4500/register', data);
             if (response.data.redirectUrl) {
-                // Store user info in local storage
+                
                 const userData = {
                     name: data.name,
                     username: data.username,
                     role: data.role,  
                 };
 
-                localStorage.setItem('user', JSON.stringify(userData)); // Store in local storage
-                navigate(response.data.redirectUrl); // Redirect to the specified URL
+                localStorage.setItem('user', JSON.stringify(userData)); 
+                navigate(response.data.redirectUrl); 
             } 
         } catch (error) {
             console.log(error);

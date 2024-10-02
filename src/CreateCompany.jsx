@@ -1,45 +1,47 @@
 import React, { useState } from 'react';
 import { useForm } from 'react-hook-form';
-import axios from 'axios'; // Import axios for making API calls
+import axios from 'axios'; 
 import './CreateCompany.css';
-import {  useNavigate } from 'react-router-dom';
+import { useNavigate } from 'react-router-dom';
 
 const CreateCompany = () => {
     const { register, handleSubmit, formState: { errors } } = useForm();
-    const [companies,setCompanies]=useState([]);
-    const navigate=useNavigate();
+    const navigate = useNavigate();
     const auth = localStorage.getItem("user");
     let UserRole = '';
-    let  username='';
-     if (auth) {
-  const user = JSON.parse(auth);  
-   UserRole=user.role; 
-   username=user.username;  
-       }
+    let username = '';
+
+    if (auth) {
+        const user = JSON.parse(auth);  
+        UserRole = user.role; 
+        username = user.username;  
+    }
      
     const onSubmit = async (data) => {
-      try {
-    const userData={
-        username:username,
-        role:UserRole,
-        companyName:data.companyName,
-        companyAddress:data.companyAddress
-    }
- const response = await axios.post('http://localhost:4500/user/company', userData);
-          if(response.data.companySave.role==="IT_ADMIN"){
-            navigate('/list')
-          }else{
-            navigate('/userCompany');
-          }   
+        try {
+            const userData = {
+                username: username,
+                role: UserRole,
+                companyName: data.companyName,
+                companyAddress: data.companyAddress,
+                status: UserRole === 'IT_USER_NORMAL' ? 'pending' : 'approved', 
+            };
+
+            const response = await axios.post('http://localhost:4500/user/company', userData);
+
+            if (UserRole === "IT_ADMIN") {
+                navigate('/list');
+            } else {
+                alert("Company created. Awaiting admin approval.");
+                navigate('/userCompany');
+            }   
         } catch (error) {
-           
             console.error('Error creating company:', error);
-          
         }
     };
 
     const handleCancel = () => {
-        navigate('/userCompany')
+        navigate('/userCompany');
     };
 
     return (
@@ -67,8 +69,6 @@ const CreateCompany = () => {
                 <div className="button-container">
                     <button type="submit" className="save-button">Save</button>
                     <button type="button" className="cancel-button" onClick={handleCancel}>Cancel</button> 
-                
-                
                 </div>
             </form>
         </div>

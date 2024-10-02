@@ -11,7 +11,7 @@ const LoginPage = () => {
         const user = localStorage.getItem('user');
         if (user) {
             const { role } = JSON.parse(user);
-            // Redirect based on the user's role
+            
             if (role === 'IT_USER_NORMAL') {
                 navigate('/userCompany');
             } else {

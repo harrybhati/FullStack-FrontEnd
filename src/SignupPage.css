@@ -1,163 +1,163 @@
-/* SignupPage.css */
+
 
 .signup-container {
-    max-width: 400px; /* Max width for larger screens */
-    margin: 0 auto; /* Center the container */
-    padding: 20px; /* Padding around the content */
-    border: 1px solid #ccc; /* Border for the container */
-    border-radius: 8px; /* Rounded corners */
-    background-color: #f9f9f9; /* Light background for readability */
-    box-shadow: 0 4px 10px rgba(0, 0, 0, 0.1); /* Subtle shadow */
+    max-width: 400px; 
+    margin: 0 auto; 
+    padding: 20px; 
+    border: 1px solid #ccc; 
+    border-radius: 8px; 
+    background-color: #f9f9f9; 
+    box-shadow: 0 4px 10px rgba(0, 0, 0, 0.1); 
 }
 
 h2 {
-    text-align: center; /* Center the heading */
-    color: #333; /* Dark text for contrast */
-    margin-bottom: 20px; /* Space below heading */
+    text-align: center; 
+    color: #333; 
+    margin-bottom: 20px; 
 }
 
 form {
     display: flex;
-    flex-direction: column; /* Stack elements vertically */
+    flex-direction: column; 
 }
 
 form > div {
-    display: flex; /* Add flex to each form field wrapper */
-    flex-direction: column; /* Ensure label and input stack vertically */
-    margin-bottom: 15px; /* Space between fields */
+    display: flex; 
+    flex-direction: column;
+    margin-bottom: 15px; 
 }
 
 label {
-    font-size: 16px; /* Readable label size */
-    margin-bottom: 5px; /* Space between label and input */
+    font-size: 16px; 
+    margin-bottom: 5px; 
 }
 
 input {
-    padding: 10px; /* Padding inside inputs */
-    border: 1px solid #ccc; /* Light border */
-    border-radius: 4px; /* Rounded corners */
-    font-size: 16px; /* Larger text */
-    transition: border-color 0.3s; /* Smooth transition for border color */
+    padding: 10px; 
+    border: 1px solid #ccc; 
+    border-radius: 4px; 
+    font-size: 16px; 
+    transition: border-color 0.3s; 
 }
 
 input:focus {
-    border-color: #007BFF; /* Change border color on focus */
-    outline: none; /* Remove default outline */
+    border-color: #007BFF; 
+    outline: none;
 }
 
 button {
-    padding: 10px; /* Padding inside button */
-    background-color: #007BFF; /* Primary button color */
-    color: white; /* White text */
-    border: none; /* Remove border */
-    border-radius: 4px; /* Rounded corners */
-    cursor: pointer; /* Pointer cursor on hover */
-    font-size: 16px; /* Larger text */
-    transition: background-color 0.3s; /* Smooth background change */
+    padding: 10px; 
+    background-color: #007BFF; 
+    color: white; 
+    border: none; 
+    border-radius: 4px; 
+    cursor: pointer; 
+    font-size: 16px; 
+    transition: background-color 0.3s; 
 }
 
 button:hover {
-    background-color: #0056b3; /* Darken button on hover */
+    background-color: #0056b3;
 }
 
 p {
-    text-align: center; /* Center paragraph */
-    margin-top: 20px; /* Space above */
+    text-align: center; 
+    margin-top: 20px; 
 }
 
 a {
-    color: #007BFF; /* Link color */
-    text-decoration: none; /* Remove underline */
+    color: #007BFF; 
+    text-decoration: none; 
 }
 
 a:hover {
-    text-decoration: underline; /* Underline on hover */
+    text-decoration: underline; 
 }
 
-/* Responsive Styles */
+
 @media (max-width: 600px) {
     .signup-container {
-        width: 90%; /* Full width on smaller screens */
-        padding: 15px; /* Reduced padding */
+        width: 90%; 
+        padding: 15px; 
     }
 
     h2 {
-        font-size: 24px; /* Adjust heading size for mobile */
+        font-size: 24px; 
     }
 
     input, button {
-        font-size: 14px; /* Smaller text for inputs and buttons */
-        padding: 8px; /* Smaller padding for inputs and buttons */
+        font-size: 14px; 
+        padding: 8px; 
     }
 
     p {
-        font-size: 16px; /* Adjust paragraph text */
+        font-size: 16px; 
     }
 }
 
 @media (min-width: 601px) and (max-width: 900px) {
     .signup-container {
-        width: 80%; /* More width on tablets */
-        padding: 20px; /* Standard padding */
+        width: 80%; 
+        padding: 20px; 
     }
 
     h2 {
-        font-size: 26px; /* Adjust heading size for tablets */
+        font-size: 26px; 
     }
 
     input, button {
-        font-size: 15px; /* Slightly larger text for inputs and buttons */
-        padding: 10px; /* Standard padding for inputs and buttons */
+        font-size: 15px; 
+        padding: 10px; 
     }
 }
 
 @media (min-width: 901px) {
     .signup-container {
-        width: 40%; /* Narrower width on desktops */
-        padding: 25px; /* More padding for desktops */
+        width: 40%;
+        padding: 25px; 
     }
 
     h2 {
-        font-size: 28px; /* Larger heading size for desktops */
+        font-size: 28px; 
     }
 
     input, button {
-        font-size: 16px; /* Maintain larger text for inputs and buttons */
-        padding: 12px; /* Standard padding for inputs and buttons */
+        font-size: 16px; 
+        padding: 12px; 
     }
 }
-/* Styles for the select dropdown */
+
 select {
-    padding: 10px; /* Padding inside the dropdown */
-    border: 1px solid #ccc; /* Light border */
-    border-radius: 4px; /* Rounded corners */
-    font-size: 16px; /* Font size */
-    transition: border-color 0.3s; /* Smooth transition for border color */
-    width: 100%; /* Full width of the parent container */
-    box-sizing: border-box; /* Include padding and border in the element's total width and height */
+    padding: 10px; 
+    border: 1px solid #ccc; 
+    border-radius: 4px; 
+    font-size: 16px; 
+    transition: border-color 0.3s; 
+    width: 100%; 
+    box-sizing: border-box;
 }
 
-/* Change border color on focus */
+
 select:focus {
-    border-color: #007BFF; /* Change border color on focus */
-    outline: none; /* Remove default outline */
+    border-color: #007BFF; 
+    outline: none; 
 }
 
-/* Error message styling */
+
 p {
-    color: red; /* Error message color */
-    font-size: 14px; /* Font size for error messages */
-    margin-top: 5px; /* Space above the error message */
+    color: red; 
+    font-size: 14px; 
+    margin-top: 5px; 
 }
 
-/* Optional: Styles for the label */
+
 label {
-    display: block; /* Make label a block element */
-    font-size: 16px; /* Font size for the label */
-    margin-bottom: 5px; /* Space below the label */
+    display: block; 
+    font-size: 16px; 
+    margin-bottom: 5px; 
 }
 
-/* Optional: Styles for the entire div containing the dropdown */
+
 div {
-    margin-bottom: 15px; /* Space below each input group */
+    margin-bottom: 15px; 
 }

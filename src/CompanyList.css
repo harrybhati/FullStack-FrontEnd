@@ -1,5 +1,3 @@
-/* CompanyList.css */
-
 .company-list-container {
     width: 90%;
     max-width: 800px;
@@ -47,23 +45,23 @@ th {
 }
 
 .edit-button {
-    background-color: #4CAF50; /* Green */
+    background-color: #4CAF50; 
     color: white;
 }
 
 .delete-button {
-    background-color: #f44336; /* Red */
+    background-color: #f44336; 
     color: white;
 }
 
 .approve-button {
-    background-color: #2196F3; /* Blue */
+    background-color: #2196F3; 
     color: white;
 }
 
-/* Responsive Styles */
+
 @media (max-width: 600px) {
     table {
-        font-size: 14px; /* Smaller font size for mobile */
+        font-size: 14px; 
     }
 }
